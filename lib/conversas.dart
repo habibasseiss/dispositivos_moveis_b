@@ -7,41 +7,38 @@ class Conversas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      child: ListView(
-        children: [
-          ListTile(
-            subtitle: Text("Oi, tudo bem?"),
-            title: Text("Fulaninho"),
-            leading: CircleAvatar(
-              backgroundImage: NetworkImage(
-                "https://images.unsplash.com/photo-1682356828551-96826d14382b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-              ),
+    return ListView(
+      children: [
+        ListTile(
+          subtitle: Text("Oi, tudo bem?"),
+          title: Text("Fulaninho"),
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(
+              "https://images.unsplash.com/photo-1682356828551-96826d14382b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
             ),
-            trailing: Text("11:34"),
           ),
-          ListTile(
-            onTap: () {
-              print("A conversa foi clicada");
-            },
-            subtitle: Text("Eaee?"),
-            title: Text("Ciclaninho da Silva"),
-            leading: CircleAvatar(
-              child: Text("CS"),
-            ),
-            trailing: Text("09:01"),
+          trailing: Text("11:34"),
+        ),
+        ListTile(
+          onTap: () {
+            print("A conversa foi clicada");
+          },
+          subtitle: Text("Eaee?"),
+          title: Text("Ciclaninho da Silva"),
+          leading: CircleAvatar(
+            child: Text("CS"),
           ),
-          ListTile(
-            subtitle: Text("Oi... 😍"),
-            title: Text("Maria Beltrão"),
-            leading: CircleAvatar(
-              child: Text("MB"),
-            ),
-            trailing: Text("09:01"),
+          trailing: Text("09:01"),
+        ),
+        ListTile(
+          subtitle: Text("Oi... 😍"),
+          title: Text("Maria Beltrão"),
+          leading: CircleAvatar(
+            child: Text("MB"),
           ),
-        ],
-      ),
+          trailing: Text("09:01"),
+        ),
+      ],
     );
   }
 }
