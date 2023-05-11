@@ -28,12 +28,13 @@ class Status extends StatelessWidget {
           title: Row(
             children: [
               Text(
-                "WhatsApp ",
+                "WhatsApp",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 61, 93, 62),
                 ),
               ),
+              SizedBox(width: 8),
               Icon(
                 Icons.verified,
                 size: 18,

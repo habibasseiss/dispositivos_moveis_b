@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class Chamadas extends StatelessWidget {
@@ -5,9 +7,8 @@ class Chamadas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      child: Text("Página de Chamadas"),
+    return ListView(
+      children: [],
     );
   }
 }
