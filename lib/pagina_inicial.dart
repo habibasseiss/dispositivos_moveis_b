@@ -18,22 +18,33 @@ class PaginaInicial extends StatelessWidget {
           title: Text("WhatsApp do IF"),
           actions: [
             IconButton(
-              onPressed: () {
-                print("O botão da câmera foi clicado.");
-              },
+              onPressed: () {},
               icon: Icon(Icons.camera_alt_outlined),
             ),
             IconButton(
-              onPressed: () {
-                print("O botão da busca foi clicado.");
-              },
+              onPressed: () {},
               icon: Icon(Icons.search),
             ),
-            IconButton(
-              onPressed: () {
-                print("O botão mais foi clicado.");
+            PopupMenuButton(
+              onSelected: (item) {
+                if (item == 3) {
+                  Navigator.pushNamed(context, '/conversa');
+                }
               },
-              icon: Icon(Icons.more_vert),
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  value: 1,
+                  child: Text('Novo grupo'),
+                ),
+                PopupMenuItem(
+                  value: 2,
+                  child: Text('Nova transmissão'),
+                ),
+                PopupMenuItem(
+                  value: 3,
+                  child: Text('Configurações'),
+                ),
+              ],
             ),
           ],
           bottom: TabBar(

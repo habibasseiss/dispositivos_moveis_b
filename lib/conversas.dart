@@ -10,6 +10,9 @@ class Conversas extends StatelessWidget {
     return ListView(
       children: [
         ListTile(
+          onTap: () {
+            Navigator.pushNamed(context, '/conversa');
+          },
           subtitle: Text("Oi, tudo bem?"),
           title: Text("Fulaninho"),
           leading: CircleAvatar(
